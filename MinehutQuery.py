@@ -18,7 +18,7 @@ language = {
 
 @bot.event
 async def on_ready():
-    print("[CONSOLE] Running 'MinehutQuery' Version 1.1 (Author: Sargera)")
+    print("[CONSOLE] Running 'MinehutQuery' Version 1.0 (Author: Sargera)")
     await bot.change_presence(game=discord.Game(name="Minehut's Data", type=3))
 
 @bot.command(pass_context = True)
