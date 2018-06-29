@@ -1,1 +1,1 @@
-# MinehutQuery
+# quarrel-bot
