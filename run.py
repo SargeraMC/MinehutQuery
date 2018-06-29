@@ -23,15 +23,9 @@ async def on_ready():
 
 @bot.command(pass_context = True)
 async def ping(ctx, server_query=None):
-    if ".minehut.gg" in server_query:
-        server_ping = MinecraftServer.lookup(server_query)
-        server_name = server_query.split(".", 1)
-        server_address = server_query
-    else:
-        server_name = server_query
-        server_address = server_query + ".minehut.gg"
-        server_ping = MinecraftServer.lookup(str(server_address))
-        
+    server_name = server_query
+    server_address = server_query + ".minehut.gg"
+    server_ping = MinecraftServer.lookup(str(server_address))
     get_status = server_ping.status()
     embed = discord.Embed(title=":white_check_mark: Command Response: Ping", description=language['ping_command_desc'], color=0x206694)
     embed.add_field(name="Server Name", value="```{}```".format(server_query))
@@ -125,7 +119,6 @@ async def stats(ctx):
     embed_message = await bot.send_message(ctx.message.channel, embed=embed)
 
 @bot.command(pass_context = True)
-
 async def status(ctx):
     load_page = requests.get("https://twitter.com/MinehutMC")
     parse_page = BeautifulSoup(load_page.content, "html.parser")
