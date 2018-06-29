@@ -152,4 +152,4 @@ async def status(ctx):
     embed.add_field(name=":pushpin: Latest Tweet", value="```{}```".format(get_latest_status), inline=False)
     await bot.send_message(ctx.message.channel, embed=embed)
     
-bot.run(os.getenv(discord_api_key))
+bot.run(os.getenv("discord_api_key"))
