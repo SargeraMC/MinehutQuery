@@ -3,3 +3,6 @@ aiohttp
 websockets
 chardet
 boto
+mcstatus
+bs4
+requests
