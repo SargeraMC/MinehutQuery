@@ -1,1 +1,1 @@
-worker: python MinehutQuery.py
+worker: python bot.py
