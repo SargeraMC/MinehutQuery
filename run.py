@@ -21,6 +21,11 @@ async def on_ready():
     print("[CONSOLE] Running 'MinehutQuery' Version 1.0 (Author: Sargera)")
     await bot.change_presence(game=discord.Game(name="Minehut's Data", type=3))
 
+@bot.event(pass_context=True)
+async def on_command_error(ctx, discord.ext.commands.errors.CommandNotFound):
+    print("Hello")
+    
+
 @bot.command(pass_context = True)
 async def ping(ctx, server_query=None):
     server_name = server_query
