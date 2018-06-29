@@ -6,3 +6,5 @@ boto
 mcstatus
 bs4
 requests
+discord.ext.commands
+discord.ext
