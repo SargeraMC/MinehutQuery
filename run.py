@@ -144,5 +144,16 @@ async def status(ctx):
     embed.add_field(name=":newspaper2: MOTD", value="```{}```".format(server_motd_formatted), inline=False)
     embed.add_field(name=":pushpin: Latest Tweet", value="```{}```".format(get_latest_status), inline=False)
     await bot.send_message(ctx.message.channel, embed=embed)
+
+
+@bot.command(pass_context = True)
+async def help(ctx):
+    embed = discord.Embed(title=":white_check_mark: Command Response: Help", description="Shows help for the commands that this bot has. If you have a good idea for a command that isnt yet available, Message Sargera!")
+    embed.set_footer(text=language['footer'], icon_url="https://i.imgur.com/uc1QL9o.png")
+    embed.add_field(name="Status Command", value="```Shows you some information about the current status of minehut, including MOTD, tweets and online status```", inline=False)
+    embed.add_field(name="Stats Command", value="```Shows you some data available on the minehut website such as ram usage, player count and more!```", inline=False)
+    embed.add_field(name="Ping Command", value="```Example Usage: !ping Haste\nWill show you some basic details about that server such as player count, status and MOTD```", inline=False)
+    embed.add_field(name="TopServers Command", value="```Example Usage: !ping Haste\nWill show you some basic details about that server such as player count, status and MOTD```", inline=False)
     
+
 bot.run(os.getenv("discord_api_key"))
