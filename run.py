@@ -8,6 +8,7 @@ import os
 from mcstatus import MinecraftServer
 
 bot = commands.Bot(command_prefix="!")
+bot.remove_command("help")
 
 language = {
     "footer":"Powered By MinehutQuery | Created By Sargera",
@@ -153,7 +154,7 @@ async def help(ctx):
     embed.add_field(name="Status Command", value="```Shows you some information about the current status of minehut, including MOTD, tweets and online status```", inline=False)
     embed.add_field(name="Stats Command", value="```Shows you some data available on the minehut website such as ram usage, player count and more!```", inline=False)
     embed.add_field(name="Ping Command", value="```Example Usage: !ping Haste\nWill show you some basic details about that server such as player count, status and MOTD```", inline=False)
-    embed.add_field(name="TopServers Command", value="```Example Usage: !ping Haste\nWill show you some basic details about that server such as player count, status and MOTD```", inline=False)
-    
+    embed.add_field(name="TopServers Command", value="```Shows you detailed information about the top servers on Minehut along with options to show you server-specific information```", inline=False)
+    await bot.send_message(ctx.message.channel, embed=embed)
 
 bot.run(os.getenv("discord_api_key"))
