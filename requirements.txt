@@ -6,3 +6,4 @@ boto
 mcstatus
 bs4
 requests
+tinydb
