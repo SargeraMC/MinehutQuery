@@ -199,5 +199,4 @@ async def help(ctx):
     embed.add_field(name="Changeprefix Command", value="```Allows you to set a custom prefix that the bot will recognise when typing MinehutQuery commands.```", inline=False)
     await bot.send_message(ctx.message.channel, embed=embed)
 
-bot.run("NDYxOTYyMzAyODk2MjA5OTIx.Dha7cw.4iFWwZOxU3qId5t4g57RJuZVjVI")
-#bot.run(os.getenv("discord_api_key"))
+bot.run(os.getenv("discord_api_key"))
